@@ -14,7 +14,7 @@ CREATE TABLE dbo.Seller
 
 CREATE TABLE dbo.Item
 (
-	ID			INT IDENTITY (1,1) NOT NULL,
+	ID			INT IDENTITY (1001,1) NOT NULL,
 	Name		NVARCHAR(50) NOT NULL,
 	Description NVARCHAR(300) NOT NULL,
 	Seller		NVARCHAR(50) NOT NULL,
@@ -38,3 +38,22 @@ CREATE TABLE dbo.Bid
 		ON DELETE CASCADE
 		ON UPDATE CASCADE
 );
+
+INSERT INTO dbo.Buyer (Name) VALUES
+	('Jane Stone'),
+	('Tom McMasters'),
+	('Otto Vanderwall');
+
+INSERT INTO dbo.Seller (Name) VALUES
+	('Gayle Hardy'),
+	('Lyle Banks'),
+	('Pearl Greene');
+
+INSERT INTO dbo.Item (Name, Description, Seller) VALUES
+	('Abraham Lincoln Hammer'    ,'A bench mallet fashioned from a broken rail-splitting maul in 1829 and owned by Abraham Lincoln', 'Pearl Greene'),
+	('Albert Einsteins Telescope','A brass telescope owned by Albert Einstein in Germany, circa 1927', 'Gayle Hardy'),
+	('Bob Dylan Love Poems'      ,'Five versions of an original unpublished, handwritten, love poem by Bob Dylan', 'Lyle Banks');
+
+INSERT INTO dbo.Bid (ItemID, Buyer, Price, TimeStamp) VALUES
+	(1001,'Otto Vanderwall',250000,'12/04/2017 09:04:22'),
+(	1003,'Jane Stone',95000 ,'12/04/2017 08:44:03');
