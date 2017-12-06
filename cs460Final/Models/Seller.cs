@@ -20,6 +20,7 @@ namespace cs460Final.Models
 
         [Key]
         [StringLength(50)]
+        [Display(Name="Seller Name")]
         public string Name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

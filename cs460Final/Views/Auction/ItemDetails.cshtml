@@ -1,0 +1,50 @@
+﻿@model cs460Final.Models.Item
+
+@{
+    ViewBag.Title = "Details For " + Model.Name;
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h4>Item</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Seller1.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seller1.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ID)
+        </dt>
+        
+        <dd id="ItemID" value="@Model.ID">
+            @Html.DisplayFor(model => model.ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+    <div class="bids"></div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "ListItems")
+</p>

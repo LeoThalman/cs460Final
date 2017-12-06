@@ -15,10 +15,12 @@ namespace cs460Final.Models
             Bids = new HashSet<Bid>();
         }
 
+        [Display(Name ="Item ID")]
         public int ID { get; set; }
 
         [Required]
         [StringLength(50)]
+        [Display(Name = "Item Name")]
         public string Name { get; set; }
 
         [Required]

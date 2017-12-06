@@ -54,6 +54,9 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -104,8 +107,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\application.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\ltcs460Final - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -122,6 +127,7 @@
     </Compile>
     <Compile Include="DAL\AuctionContext.cs" />
     <Compile Include="Models\Bid.cs" />
+    <Compile Include="Models\BidTable.cs" />
     <Compile Include="Models\Buyer.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Seller.cs" />
@@ -138,6 +144,12 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Auction\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Auction\ListItems.cshtml" />
+    <Content Include="Views\Auction\AddItem.cshtml" />
+    <Content Include="Views\Auction\ItemDetails.cshtml" />
+    <Content Include="Views\Auction\EditItem.cshtml" />
+    <Content Include="Views\Auction\DeleteItem.cshtml" />
+    <Content Include="Views\Auction\CreateBid.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
