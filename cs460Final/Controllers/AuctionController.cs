@@ -136,11 +136,11 @@ namespace cs460Final.Controllers
         {
             LoadVM();
             vm.Bids = vm.db.Bids.Where(b => b.ItemID == id).OrderBy(i => i.Price).Reverse().ToList();
-            List<Bid> tBids = new List<Bid>();
-            Bid temp;
+            List<BidTable> tBids = new List<BidTable>();
+            BidTable temp;
             foreach(Bid bid in vm.Bids)
             {
-                temp = new Bid
+                temp = new BidTable
                 {
                     Buyer = bid.Buyer,
                     Price = bid.Price

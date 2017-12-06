@@ -2,6 +2,7 @@
     
 
     var ajaxcall = function () {
+        console.log("test");
         var id = $('#ItemID').val();
         var query = "Auction/GetBids?id=" + id;
         $.ajax({
@@ -15,16 +16,18 @@
 
 
     function loadBids(data) {
+        console.log("hello");
         var temp = JSON.parse(data);
         $('.bids').empty();
         $('.bids').append('<tr> <th> Bidder Name </th><th>Bidder Price</th></tr>');
         for (var i = 0; i < temp.length; i += 1) {
             $('.bids').append('<tr> <td>' + temp[i].Buyer + '</td><td> ' + temp[i].Price + '</td></tr>');
-        
+
+        }
     }
 
-    function failed() {
 
+    function failed() {
         }
 
     var interval = 5000;
